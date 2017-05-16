@@ -39,7 +39,7 @@
                             <div class="col-sm-4 margin-btm-30 staff">
                                 <tr>
                                   <center>
-                                   <a href="teacherProfile.php?id=<?=$row["id"]?>">
+                                   <a href="ProfileTeacher.php?id=<?=$row["id"]?>">
                                     <img src="Prof/<?echo($row["id"])?>.jpg" class="img-responsive" alt="">
                                     <h4></h4>
                                       <p style="font-size: 20px;  "><?=$row["name"]?> </p></a>
