@@ -13,13 +13,14 @@
 	}
 	else
 	{               
-		include("connect.php");                              
-		$check_log = mysql_query("SELECT * FROM Admin WHERE username ='$username' AND password='$password'");                         
-		if(mysql_num_rows($check_log) <=0)                                                         
-			echo "Invalid Username or Password <br/><a href='loginByAdmin.php'>Back</a>";
-	 	else 
+		$con = mysqli_connect("localhost","root","","phpbasic");                                
+		$check_log = mysqli_query($con,"SELECT * FROM Admin where username ='$username' and password ='$password' ");                         
+		$num = mysqli_num_rows($check_log);
+		if($num <=0)                                                         
+			echo "Invalid Username or Password<br/><a href='loginByAdmin.php'>Back</a>";
+	 	else
 	 	{
-			while ($data = mysql_fetch_array($check_log) )
+			while ($data = mysqli_fetch_array($check_log) )
 			{
 				$_SESSION["ses_userid"] = session_id();
 				$_SESSION["ses_username"] = $username;

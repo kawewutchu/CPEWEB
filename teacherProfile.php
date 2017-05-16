@@ -30,9 +30,8 @@
                             <h3 class="panel-title">Information</h3>
                           </div>
                           <div class="panel-body">
-                                <form action="add4.php" method="POST" role="form" enctype="multipart/form-data">
                                     <center>
-                                        <img src="52-59_60/<?echo($row["studentId"])?>.jpg" class="img-responsive" alt="">
+                                        <img src="Prof/<?echo($row["id"])?>.jpg" class="img-responsive" alt="">
                                     </center>
                                     <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
