@@ -1,4 +1,4 @@
-<?php require_once("header.html"); ?>
+<?php require_once("headerAdmin.html"); ?>
 <!-- <?php
 
 	$servername = "localhost";
@@ -27,7 +27,7 @@
                         <h2 style="font-size: 45px;">Student Year 3</h2>
                     </div>
                      <div class="col-md-3">
-                      <a href="#" class="btn btn-success" role="button">Add student</a>
+                      <a href="admin-form.php" class="btn btn-success" role="button">Add student</a>
                     </div>
                 </div>
             </div>

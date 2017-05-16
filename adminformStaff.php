@@ -13,7 +13,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	} 
 	
-	$sql = "SELECT * FROM TABLE_4";
+	$sql = "SELECT * FROM TABLE_7";
 	$result = $conn->query($sql);
 	
 	
@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                        <h2 style="font-size: 45px;">Student Year 4</h2>
+                        <h2 style="font-size: 45px;">Staff</h2>
                     </div>
                     <div class="col-md-3">
                       <a href="admin-form.php"  class="btn btn-success" role="button">Add student</a>
@@ -35,24 +35,22 @@
           <div class="container">
                 <div class="row">
                      <div class="col-xs-12">
-                        <h3 style="margin-top: 35px; font-size: 30px;" class="color-1">จำนวนนักศึกษา <?=$result->num_rows?> คน</h3>
+                        <h3 style="margin-top: 35px; font-size: 30px;" class="color-1">จำนวนเจ้าหน้าที่ <?=$result->num_rows?> คน</h3>
                         <div class="table-responsive">
                               <table class="table table-curved">
                                     <thead>
                                           <tr>
-                                                <th style="font-size: 20px;" class="col-sm-2 bg-color-1">ชื่อ</th>
-                                                <th style="font-size: 20px;" class="col-sm-2 bg-color-2">นามสกุล</th>
-                                                <th style="font-size: 20px;" class="col-sm-2 bg-color-3">รหัสนักศึกษา</th>
-                                                <th style="font-size: 20px;" class="col-sm-2 bg-color-4">เครื่องมือ</th>
+                                                <th style="font-size: 20px;" class="col-sm-3 bg-color-1">ชื่อ-นามสกุล</th>
+                                                <th style="font-size: 20px;" class="col-sm-3 bg-color-3">หน้าที่</th>
+                                                <th style="font-size: 20px;" class="col-sm-3 bg-color-4">เครื่องมือ</th>
                                           </tr>
                                     </thead>
                                     <tbody>
                                     	 <?php while($row = $result->fetch_assoc()): ?>
                                     		<tr>
                                             	  <td><a style="font-size: 20px;"><?=$row["name"]?></a></td>
-                                            	  <td><a style="font-size: 20px;"><?=$row["lastname"]?></a></td>
-                                                <td><a style="font-size: 20px;"><?=$row["studentId"]?></a></td>
-                                                <td><a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> <a href="#" class="btn btn-danger" role="button">Delete</a></td>
+                                            	  <td><a style="font-size: 20px;"><?=$row["job"]?></a></td>
+                                                <td> <a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> <a href="#" class="btn btn-danger" role="button">Delete</a></td>
                                             </tr>
                                          <?php endwhile; ?>
                                     </tbody>

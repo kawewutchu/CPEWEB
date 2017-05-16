@@ -10,17 +10,13 @@
                             <h3 class="panel-title">Create  an account</h3>
                           </div>
                           <div class="panel-body">
-                               
+                               <form  action="add.php" method="POST" role="form" enctype="multipart/form-data">
                                     <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
                                               <label class="control-label" for="inputError1" style="font-weight: bold">ชั้นปีการศึกษา</label><br/>
-                                                <input type="radio"   name="year" value="=ชั้นปี 1" required>ปี 1&nbsp;&nbsp;<input type="radio"  name="year" value="ชั้นปี 2">ปี 2&nbsp;&nbsp;<input type="radio"  name="year" value="ชั้นปี 3">ปี 3&nbsp;&nbsp;<input type="radio"  name="year" value="ชั้นปี 4">ปี 4
+                                                <input type="radio"   name="year" value="1" required>ปี 1&nbsp;&nbsp;<input type="radio"  name="year" value="2">ปี 2&nbsp;&nbsp;<input type="radio"  name="year" value="3">ปี 3&nbsp;&nbsp;<input type="radio"  name="year" value="4">ปี 4
                                         </div>
-                                      </div>
-
-                                    
-                                    <form  action="add02.php" method="POST" role="form" enctype="multipart/form-data">
-                                      
+                                      </div>                         
                                       <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
                                            <label class="control-label" for="inputError1" style="font-weight: bold;"><br>ชื่อ</label>
@@ -128,7 +124,7 @@
                                          <div class="form-group">
                                         <div class="col-xs-12 ">
                                               <label class="control-label" for="" style="font-weight: bold;"><br >รูปภาพ</label>
-                                              <input type="file" name="img" id="img " required>
+                                              <input type="file" name="img" id="img" required>
                                             </div>
 
                                         </div>
