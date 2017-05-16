@@ -10,7 +10,7 @@
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   } 
-  $sql = "SELECT * FROM TABLE_1 where studentId='".$_GET["studentId"]."'";
+  $sql = "SELECT * FROM TABLE_4 where studentId='".$_GET["studentId"]."'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc()
   ?>
@@ -25,7 +25,7 @@
                             <h3 class="panel-title">Information</h3>
                           </div>
                           <div class="panel-body">
-                                <form action="edit1.php" method="POST" role="form" enctype="multipart/form-data">
+                                <form action="edit4.php" method="POST" role="form" enctype="multipart/form-data">
                                     <center>
                                         <img src="52-59_60/<?echo($row["studentId"])?>.jpg" class="img-responsive" alt="">
                                     </center>
@@ -64,7 +64,7 @@
                                         <div class="col-xs-12 form-group has-error">
                                               <label class="control-label" for="inputError1" style="font-weight: bold">รหัสนักศึกษา</label>
                                                <input type="text" class="form-control"
-                                               id="studentId" name="studentId" value="<?echo($row["studentId"])?>" required>
+                                               id="inputError1" name="studentId" value="<?echo($row["studentId"])?>" required>
                                         </div>
                                       </div>
 
@@ -94,7 +94,7 @@
                                        <div class="form-group">
                                         <div class="col-xs-12 form-group has-error">
                                               <label class="control-label" for="inputError1" style="font-weight: bold;"><br>ลักษณะเฉพาะ</label>
-                                              <textarea class="form-control" id="inputError1" name="special" value="<?echo($row["special"])?>" rows="3"></textarea>
+                                              <textarea class="form-control" id="inputError1" name="detail" value="<?echo($row["character"])?>" rows="3"></textarea>
                                             </div>
                                         </div>
 

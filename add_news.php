@@ -44,7 +44,7 @@
             VALUES ('".$_POST["title"]."','".$_POST["title_show"]."','".$_POST["detail"]."','".$_POST["detail_show"]."','".$target_file."')";
 
 	if ($conn->query($sql) === TRUE) {
-		header('Location:form_news.php');
+		header('Location:adminformNews.php');
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}

@@ -52,7 +52,7 @@
                                             	  <td><a style="font-size: 20px;"><?=$row["name"]?></a></td>
                                             	  <td><a style="font-size: 20px;"><?=$row["lastname"]?></a></td>
                                                 <td><a style="font-size: 20px;"><?=$row["studentId"]?></a></td>
-                                                  <td> <a href="studentProfile2Edit.php.php?studentId=<?=$row["studentId"]?>" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> <a href="delete2.php?studentId=<?=$row["studentId"]?>" class="btn btn-danger" role="button">Delete</a></td>
+                                                  <td> <a href="studentProfile2Edit.php?studentId=<?=$row["studentId"]?>" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> <a href="delete2.php?studentId=<?=$row["studentId"]?>" class="btn btn-danger" role="button">Delete</a></td>
                                             </tr>
                                          <?php endwhile; ?>
                                     </tbody>

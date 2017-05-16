@@ -45,7 +45,7 @@
             VALUES ('".$_POST["job"]."', '".$_POST["name"]."','".$_POST["role"]."','".$_POST["education"]."','".$_POST["email"]."','".$target_file."')";
 
 	if ($conn->query($sql) === TRUE) {
-		header('Location:form4.php');
+		header('Location:adminformStaff.php');
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}

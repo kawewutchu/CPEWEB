@@ -27,7 +27,7 @@
                         <h2 style="font-size: 45px;">Staff</h2>
                     </div>
                     <div class="col-md-3">
-                      <a href="admin-form.php"  class="btn btn-success" role="button">Add student</a>
+                      <a href="admin-form-staff.php"  class="btn btn-success" role="button">Add Staff</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,8 @@
                                     		<tr>
                                             	  <td><a style="font-size: 20px;"><?=$row["name"]?></a></td>
                                             	  <td><a style="font-size: 20px;"><?=$row["job"]?></a></td>
-                                                <td> <a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> <a href="#" class="btn btn-danger" role="button">Delete</a></td>
+                                                <td> <a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a>
+                                                 <a href="deletestaff.php?id=<?=$row["id"]?>" class="btn btn-danger" role="button">Delete</a></td>
                                             </tr>
                                          <?php endwhile; ?>
                                     </tbody>

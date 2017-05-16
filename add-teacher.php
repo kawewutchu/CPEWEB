@@ -45,7 +45,7 @@
             VALUES ('".$_POST["name"]."', '".$_POST["englishName"]."','".$_POST["workplace"]."','".$_POST["room"]."','".$_POST["phone"]."','".$_POST["email"]."','".$_POST["personalPage"]."','".$_POST["re_group"]."','".$_POST["fax"]."','".$_POST["researchInterests"]."','".$_POST["education"]."','".$_POST["pastGraduation"]."','".$_POST["workExperience"]."','".$target_file."')";
 
 	if ($conn->query($sql) === TRUE) {
-		header('Location:admin-form-teacher.php');
+		header('Location:adminformAcademic.php');
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}

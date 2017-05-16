@@ -27,7 +27,7 @@
                         <h2 style="font-size: 45px;">News</h2>
                     </div>
                      <div class="col-md-3">
-                      <a href="admin-form.php"  class="btn btn-success" role="button">Add student</a>
+                      <a href="form_news.php"  class="btn btn-success" role="button">Add News</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,8 @@
                                     	 <?php while($row = $result->fetch_assoc()): ?>
                                     		<tr>
                                             	  <td><a style="font-size: 20px;"><?=$row["title"]?></a></td>
-                                                <td> <center><a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> <a href="#" class="btn btn-danger" role="button">Delete</a></center></td>
+                                                <td> <center><a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> 
+                                                <a href="deleteNews.php?id=<?=$row["id"]?>" class="btn btn-danger" role="button">Delete</a>
                                             </tr>
                                          <?php endwhile; ?>
                                     </tbody>
