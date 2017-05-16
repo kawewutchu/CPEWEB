@@ -1,5 +1,4 @@
-<?php require_once("header.html"); ?>
-<!DOCTYPE html>
+
 
 
 <?php
@@ -49,7 +48,45 @@
         <![endif]-->
     </head>
     <body>
-
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                    <a class="navbar-header" href="#">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    <img class="logo" src="img/logo.png" alt=""></a>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ><a style="font-size: 25px;" href="index.html">Home</a></li>
+                        <li  class="dropdown">
+                                <a style="font-size: 25px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a style="font-size: 15px;" href="Admission1.html">Admission 1</a></li>
+                                <li><a style="font-size: 15px;" href="Admission2.html">Admission 2</a></li>
+                                <li><a style="font-size: 15px;" href="Admission3.html">Admission 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a style="font-size: 25px;" href="blog.php">News</a></li>
+                            <li class="dropdown">
+                                <a style="font-size: 25px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">People <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a style="font-size: 15px;" href="showYear1.php">Students Year 1</a></li>
+                                <li><a style="font-size: 15px;" href="showYear2.php">Students Year 2</a></li>
+                                <li><a style="font-size: 15px;" href="showYear3.php">Students Year 3</a></li>
+                                <li><a style="font-size: 15px;" href="showYear4.php">Students Year 4</a></li>
+                                <li><a style="font-size: 15px;" href="showTecher.php">showTeacher</a></li>
+                                <li><a style="font-size: 15px;" href="showStaff.php">Staff</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="font-size: 25px;" href="contract.html">Contact us</a></li>
+                       <!--  <li><a style="font-size: 25px;" href="logout.php">Logout</a></li> -->
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
         <div class="medical-breadcrumb">
             <div class="container">
                 <div class="row">
@@ -94,54 +131,46 @@
                     </ul>
                 </div><!--post column end-->
 
-
-
-
-
-
-
                 </div>
             </div>
-
-        <div class="divide40"></div>
-
-        <div class="cta">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 text-center">
-                        <h3>Take a tour of our medical facility</h3>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <a href="#" class="btn btn-white-border btn-lg">Make an appointment</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="footer">
+         <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 margin30">
-                        <h3>About Medical</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
+                        <div id="googleMap" style="width:100%;height:250px;"></div>
+
+                            <script>
+                            function myMap() {
+                            var mapProp= {
+                                center:new google.maps.LatLng(18.795673,98.9519858),
+                                zoom:17,
+                            };
+                            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                            }
+                            </script>
+
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ3UDvQLE6R5TABE8KHnpzb6yTrRJGzlY&callback=myMap"></script>
+                    </div>
+                    <div class="col-md-3 margin30">
+                        <h3>Contact Us</h3>
                         <ul class="list-unstyled contact-details">
                             <li class="clearfix">
                                 <i class="pe-7s-home"></i>
                                 <p>
-                                    124, Munna wali street, queens road, 302012
+                                    239, ถนนห้วยเเก้ว ตำบลสุเทพ อำเภอเมือง จังหวัดเชียงใหม่ 50200
                                 </p>
                             </li>
                             <li class="clearfix">
                                 <i class="pe-7s-phone"></i>
                                 <p>
-                                    +01 1800 555 33
+                                    +668-4614-0006<br>
+                                    +66-5394-2023
                                 </p>
                             </li>
                             <li class="clearfix">
                                 <i class="pe-7s-mail"></i>
                                 <p>
-                                    support@assanmedical.com
+                                    cpe@eng.cmu.ac.th
                                 </p>
                             </li>
                         </ul>
@@ -171,15 +200,33 @@
                     <div class="col-md-3 margin30">
                         <h3>Quick links</h3>
                         <ul class="list-unstyled quick-links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Faqs</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">make an appointment</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Privacy & policy</a></li>
-                            <li><a href="#">Terms & conditions</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.php">News</a></li>
+                            <li><a href="showYear1.php">Studens year1</a></li>
+                            <li><a href="showYear2.php">Studens year2</a></li>
+                            <li><a href="showYear3.php">Studens year3</a></li>
+                            <li><a href="showYear4.php">Studens year4</a></li>
+                            <li><a href="showTecher.php">Academic</a></li>
+                            <li><a href="showStaff.php">Staff</a></li>
                         </ul>
+                    </div>
+                    
+                    <div class="col-md-3 margin30">
+                        <h3>Quick Contact</h3>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group text-right">
+                                <button type="button" class="btn btn-theme-bg btn-lg">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -191,14 +238,18 @@
         </footer>
 
         <script src="js/jquery.min.js"></script>
-          <script src="js/jquery-migrate.min.js"></script>
+        <script src="js/jquery-migrate.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="js/pace.min.js" type="text/javascript"></script>
         <script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
         <script src="js/jquery.stellar.min.js" type="text/javascript"></script>
         <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script src="js/wow.min.js" type="text/javascript"></script>
-        <script src="js/medical-custom.js" type="text/javascript"></script>
 
+        <!--revolution slider plugins-->
+        <script src="rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+        <script src="rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/revolution-custom.js"></script>
+        <script src="js/medical-custom.js" type="text/javascript"></script>
     </body>
 </html>

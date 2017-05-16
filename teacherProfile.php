@@ -1,5 +1,4 @@
 
-<?php require_once("header.html"); ?> 
 <?php
 
   $servername = "localhost";
@@ -19,6 +18,86 @@
   $row = $result->fetch_assoc()
 
   ?>
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Bachelor's degree</title>
+
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!--plugins css-->
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/owl.theme.css" rel="stylesheet">
+        <link href="css/flexslider.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/magnific-popup.css" rel="stylesheet">
+        <!--custom css for only medial template-->
+        <link href="css/medical.css" type="text/css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Static navbar -->
+         <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                    <a class="navbar-header" href="#">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    <img class="logo" src="img/logo.png" alt=""></a>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ><a style="font-size: 25px;" href="index.html">Home</a></li>
+                        <li class="dropdown">
+                                <a style="font-size: 25px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a style="font-size: 15px;" href="Admission1.html">Admission 1</a></li>
+                                <li><a style="font-size: 15px;" href="Admission2.html">Admission 2</a></li>
+                                <li ><a style="font-size: 15px;" href="Admission3.html">Admission 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="font-size: 25px;" href="blog.php">News</a></li>
+                            <li class="active"  class="dropdown">
+                                <a style="font-size: 25px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">People <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li  ><a style="font-size: 15px;" href="showYear1.php">Students Year 1</a></li>
+                                <li><a style="font-size: 15px;" href="showYear2.php">Students Year 2</a></li>
+                                <li><a style="font-size: 15px;" href="showYear3.php">Students Year 3</a></li>
+                                <li><a style="font-size: 15px;" href="showYear4.php">Students Year 4</a></li>
+                                <li class="active"><a style="font-size: 15px;" href="showTecher.php">showTeacher</a></li>
+                                <li><a style="font-size: 15px;" href="showStaff.php">Staff</a></li>
+                            </ul>
+                        </li>
+                        <li><a style="font-size: 25px;" href="contract.html">Contact us</a></li>
+                       <!--  <li><a style="font-size: 25px;" href="logout.php">Logout</a></li> -->
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+ <div class="medical-breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Year 1st</h2>
+                    </div>
+                </div>
+            </div>
+</div><!--breadcrumb-->
+<div class="divide70"></div>
   <!-- MAIN SECTION -->
   <div class="divide40"></div>
      <section class="mainContent full-width clearfix">
