@@ -1,6 +1,6 @@
 <?php require_once("headerAdmin.html"); ?>
-< <?php
-
+<?php
+  require_once("checkLoggedIn.php");
 	$servername = "localhost";
 	$username = "root";
 	$password = "";

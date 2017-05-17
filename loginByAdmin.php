@@ -15,7 +15,7 @@
     <div style="margin-top: 100px; padding-bottom: 50px;border-style: ridge; border-radius: 5%" class="col-xs-2 col-md-2 col-sm-2 ">
 
         <center><p style="font-size: 30px;padding-top:15px;color:DarkGray">Admin</p>
-        <img src="logo.png" class="img-responsive" alt="Responsive image" style="width:120px;height:auto; margin-bottom: 15px;"></center>
+        <img src="img/logoadmin.jpeg" class="img-responsive" alt="Responsive image" style="width:120px;height:auto; margin-bottom: 15px;"></center>
         <form action="check-login.php" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" name="username" placeholder="User">

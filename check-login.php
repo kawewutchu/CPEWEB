@@ -24,7 +24,7 @@
 			{
 				$_SESSION["ses_userid"] = session_id();
 				$_SESSION["ses_username"] = $username;
-				echo "<meta http-equiv='refresh' content='1;URL=admin-form.php'>";
+				echo "<meta http-equiv='refresh' content='1;URL=adminfirstpage.php'>";
 			}
 		}
 	}

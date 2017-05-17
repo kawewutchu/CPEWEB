@@ -1,5 +1,7 @@
 
- <?php require_once("header.html"); ?>
+ <?php require_once("headerAdmin.html"); 
+ require_once("checkLoggedIn.php");
+ ?>
 
     <!-- MAIN SECTION -->
      <section class="mainContent full-width clearfix">

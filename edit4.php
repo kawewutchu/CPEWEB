@@ -1,5 +1,6 @@
 <?php
 	$conn = mysqli_connect("localhost", "root", "", "phpbasic");
+	mysqli_set_charset($conn, "utf8");
 	// Check connection
 	if(!empty($_FILES["img"]["name"])) {
 	    $target_dir = "52-59_60/";

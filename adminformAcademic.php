@@ -1,6 +1,6 @@
 <?php require_once("headerAdmin.html"); ?>
-<!-- <?php
-
+<?php
+  require_once("checkLoggedIn.php");
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
@@ -18,6 +18,7 @@
 	
 	
 ?>
+
     <!-- MAIN SECTION -->
      <section class="mainContent full-width clearfix">
      <div class="medical-breadcrumb">
