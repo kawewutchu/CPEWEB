@@ -51,7 +51,7 @@
                                     		<tr>
                                             	  <td><a style="font-size: 20px;"><?=$row["name"]?></a></td>
                                             	  <td><a style="font-size: 20px;"><?=$row["englishName"]?></a></td>
-                                                <td><a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> 
+                                                <td><a href="teacherEdit.php?id=<?=$row["id"]?>" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> 
                                                 <a href="deleteTeacher.php?id=<?=$row["id"]?>" class="btn btn-danger" role="button">Delete</a>
                                             </tr>
                                          <?php endwhile; ?>

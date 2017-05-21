@@ -1,5 +1,5 @@
 <?php
-	$conn = mysqli_connect("localhost", "root", "", "phpbasic");
+	$conn = mysqli_connect("www.innogaku .com", "group2", "group2", "group2");
 	mysqli_set_charset($conn, "utf8");
 	// Check connection
 	if(!empty($_FILES["img"]["name"])) {
@@ -20,5 +20,5 @@
 	    echo "Error updating record: " . mysqli_error($conn);
 	}
 	mysqli_close($conn);
-	echo "<meta http-equiv='refresh' content='1;URL=adminformStudent1.php'>";
+	echo "<meta http-equiv='refresh' content='1;URL=adminformAcademic.php.php'>";
 ?>

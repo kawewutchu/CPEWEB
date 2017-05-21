@@ -48,7 +48,7 @@
                                     	 <?php while($row = $result->fetch_assoc()): ?>
                                     		<tr>
                                             	  <td><a style="font-size: 20px;"><?=$row["title"]?></a></td>
-                                                <td> <center><a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> 
+                                                <td> <center><a href="newsEdit.php?id=<?=$row["id"]?>" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a> 
                                                 <a href="deleteNews.php?id=<?=$row["id"]?>" class="btn btn-danger" role="button">Delete</a>
                                             </tr>
                                          <?php endwhile; ?>

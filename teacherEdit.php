@@ -1,5 +1,6 @@
-<?php require_once("headerAdmin.html"); 
-require_once("checkLoggedIn.php");?> 
+<?php require_once("headerAdmin.html");  
+require_once("checkLoggedIn.php");
+?>
 <?php
   $servername = "localhost";
   $username = "root";
@@ -10,8 +11,8 @@ require_once("checkLoggedIn.php");?>
   // Check connection
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-  } 
-  $sql = "SELECT * FROM TABLE_2 where studentId='".$_GET["studentId"]."'";
+  }
+  $sql = "SELECT * FROM TABLE_6 where id='".$_GET["id"]."'";
   $result = $conn->query($sql);
   $row = $result->fetch_assoc()
   ?>
@@ -23,131 +24,127 @@ require_once("checkLoggedIn.php");?>
              <div class="col-xs-offset-1 col-xs-10">
                     <div class="panel panel-default formPanel">
                           <div class="panel-heading bg-color-1 border-color-1">
-                            <h3 class="panel-title">Information</h3>
+                            <h3 class="panel-title">Edit Teacher</h3>
                           </div>
                           <div class="panel-body">
-                                <form action="edit2.php" method="POST" role="form" enctype="multipart/form-data">
+                                <form action="editTeacher.php" method="POST" role="form" enctype="multipart/form-data" in>
+                                <input type="hidden" name="id" value="<?=$_GET['id'] ?>">
                                     <center>
-                                        <img src="52-59_60/<?echo($row["studentId"])?>.jpg" class="img-responsive" alt="">
+                                        <img src="Prof/<?echo($row["id"])?>.jpg" class="img-responsive" alt="">
                                     </center>
-                                    <div class="form-group formField">
+                                     <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold">ชั้นปีการศึกษา</label>
-                                                <p><?=$row["year"]?></p>
-                                        </div>
-                                      </div >
-                                      
-                                      <div class="form-group formField">
-                                        <div class="col-xs-12 form-group has-error">
-                                           <label class="control-label" for="inputError1" style="font-weight: bold;"><br>ชื่อ</label>
+                                           <label class="control-label" for="inputError1" style="font-weight: bold;"><br>ชื่อ(Name)</label>
                                            <input type="text" class="form-control" id="inputError1" name="name" value="<?echo($row["name"])?>" required>
-
+ 
                                         </div>
                                       </div>
-
+ 
+                                     
+                                      <div class="form-group formField">
+                                        <div class="col-xs-12 form-group has-error">
+                                           <label class="control-label" for="inputError1" style="font-weight: bold;"><br>ชื่อภาษาอังกฤษ(English name)</label>
+                                           <input type="text" class="form-control" id="inputError1" name="englishName" value="<?echo($row["englishName"])?>" required>
+ 
+                                        </div>
+                                      </div>
+ 
                                        <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold">นามสกุล</label>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold">สถานที่ทำงาน(Workplace)</label>
                                                <input type="text" class="form-control"
-                                               id="inputError1" name="lastname" value="<?echo($row["lastname"])?>" required>
+                                               id="inputError1" name="workplace" value="<?echo($row["workplace"])?>" required>
                                         </div>
                                       </div>
-
+ 
                                     <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold">ชื่อเล่น</label>
-                                               <input type="text" class="form-control" 
-                                               id="inputError1"name="nickname" value="<?echo($row["nickname"])?>" required>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold">ห้องพักอาจารย์(Room)</label>
+                                               <input type="text" class="form-control"
+                                               id="inputError1" name="room" value="<?echo($row["room"])?>" required>
                                         </div>
                                       </div>
-
+ 
                                     <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold">รหัสนักศึกษา</label>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold">เบอร์โทรศัพท์(Phone number)</label>
                                                <input type="text" class="form-control"
-                                               id="inputError1" name="studentId" value="<?echo($row["studentId"])?>" required>
+                                               id="inputError1" name="phone" value="<?echo($row["phone"])?>" required>
                                         </div>
                                       </div>
-
+ 
                                       <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold">สำเร็จการศึกษาจาก</label>
-                                               <input type="text" class="form-control" 
+                                              <label class="control-label" for="inputError1" style="font-weight: bold">อีเมลล์(Email)</label>
+                                               <input type="text" class="form-control"
                                                id="inputError1"
-                                               name="school" value="<?echo($row["school"])?>" required>
+                                               name="email" value="<?echo($row["email"])?>" required>
                                         </div>
                                       </div>
-
-                                      <div class="form-group formField">
+ 
+                                      <div class="form-group">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold"><br>เข้าศึกษาผ่านทาง</label><br/>
-                                                <p><?=($row["addmission"])?></p>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold;"><br>เว็บไซต์ส่วนตัว(Personal page)</label>
+                                              <textarea class="form-control" id="inputError1" name="personalPage" rows="3"><?echo($row["personalPage"])?></textarea>
+                                            </div>
                                         </div>
-                                      </div>
-
-                                      <div class="form-group formField">
+ 
+                                      <div class="form-group">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold">เพศ</label><br/>
-                                                  <p><?=($row["sex"])?></p>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold;"><br>กลุ่มงานวิจัย</label>
+                                              <textarea class="form-control" id="inputError1" name="re_group" rows="3"><?echo($row["re_group"])?></textarea>
+                                            </div>
                                         </div>
-                                      </div>
      
                                        <div class="form-group">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold;"><br>ลักษณะเฉพาะ</label>
-                                              <textarea class="form-control" id="inputError1" name="special" value="<?echo($row["character"])?>" rows="3"></textarea>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold;"><br>แฟกซ์(Fax)</label>
+                                              <textarea class="form-control" id="inputError1" name="fax" rows="3"><?echo($row["fax"])?></textarea>
                                             </div>
                                         </div>
-
+ 
                                         <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold;">เบอร์ติดต่อ</label>
-                                               <input type="text" class="form-control"
-                                               id="inputError1" 
-                                                name="tel" value="<?echo($row["tel"])?>" required>
-                                        </div>
-                                      </div>
-
-                                      <div class="form-group formField">
-                                        <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold;">อีเมล</label>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold;">ความเชี่ยวชาญเฉพาะ(Research interests)</label>
                                                <input type="text" class="form-control"
                                                id="inputError1"
-                                                name="email" value="<?echo($row["email"])?>" required>
+                                                name="researchInterests" value="<?echo($row["researchInterests"])?>" required>
                                         </div>
                                       </div>
-
+ 
                                       <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold;">Line</label>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold;">ระดับการศึกษา(Education)</label>
                                                <input type="text" class="form-control"
-                                               id="inputError1" value="<?echo($row["line"])?>"
-                                                name="line" required>
+                                               id="inputError1"
+                                                name="education" value="<?echo($row["education"])?>" required>
                                         </div>
                                       </div>
-
+ 
                                       <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold;">Twitter</label>
-                                               <input type="text" class="form-control" value="<?echo($row["twitter"])?>"
-                                               id="inputError1" name="twitter" required>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold;">สำเร็จการศึกษาจาก(Graduation)</label>
+                                               <input type="text" class="form-control"
+                                               id="inputError1" value="<?echo($row["pastGraduation"])?>"
+                                                name="pastGraduation" required>
                                         </div>
                                       </div>
-
+ 
                                       <div class="form-group formField">
                                         <div class="col-xs-12 form-group has-error">
-                                              <label class="control-label" for="inputError1" style="font-weight: bold;">Facebook</label>
-                                               <input type="text" class="form-control" value="<?echo($row["facebook"])?>"
-                                               id="inputError1" name="facebook" required>
+                                              <label class="control-label" for="inputError1" style="font-weight: bold;">ประสบการณ์การทำงาน(Work experience)</label>
+                                               <input type="text" class="form-control" value="<?echo($row["workExperience"])?>"
+                                               id="inputError1" name="workExperience" required>
                                         </div>
                                       </div>
-
+ 
+ 
                                       <div class="form-group">
                                         <div class="col-xs-12 ">
                                               <label class="control-label" for="" style="font-weight: bold;"><br >รูปภาพ</label>
                                               <input type="file" name="img" id="img">
                                             </div>
-
+ 
                                         </div>
                                       <div  class="form-group formField has-error">
                                             <div class="col-xs-12">
@@ -160,9 +157,9 @@ require_once("checkLoggedIn.php");?>
                     </div>
              </div>
         </div>
-          
+         
       </div>
     </section>
  
 <?php $conn->close(); ?>
-<?php require_once("footer.html"); ?> 
+<?php require_once("footer.html"); ?>

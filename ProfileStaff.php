@@ -1,10 +1,10 @@
 
 <?php
 
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "phpbasic";
+  $servername = "www.innogaku.com";
+  $username = "group2";
+  $password = "group2";
+  $dbname = "group2";
   $conn = new mysqli($servername, $username, $password,$dbname);
   mysqli_set_charset($conn, "utf8");
 

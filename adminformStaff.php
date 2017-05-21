@@ -50,7 +50,7 @@
                                     		<tr>
                                             	  <td><a style="font-size: 20px;"><?=$row["name"]?></a></td>
                                             	  <td><a style="font-size: 20px;"><?=$row["job"]?></a></td>
-                                                <td> <a href="#" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a>
+                                                <td> <a href="staffEdit.php?id=<?=$row["id"]?>" style="margin-right: 20px;" class="btn btn-info" role="button">Edit</a>
                                                  <a href="deletestaff.php?id=<?=$row["id"]?>" class="btn btn-danger" role="button">Delete</a></td>
                                             </tr>
                                          <?php endwhile; ?>
